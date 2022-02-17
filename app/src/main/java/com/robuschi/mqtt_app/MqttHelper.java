@@ -20,11 +20,11 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class MqttHelper {
     public MqttAndroidClient mqttAndroidClient;
 
-    final String serverUri = "tcp://mqtt.thingspeak.com:1883";
+    final String serverUri = "tcp://broker.hivemq.com:1883";//Broker selection
     final String clientId = "id" + Integer.toHexString((int)(1000000000L * Math.random()));//"ExampleAndroidClient";
-    final String subscriptionTopic = "channels/137740/subscribe/json";
+    final String subscriptionTopic = "quinta_di";//Topic selection
     final String username = "user" + Integer.toHexString((int)(1000000000L * Math.random()));
-    final String password = "CYZ2NM284QTL0NV2";
+    final String password = "";//Password selection
 
     public MqttHelper(Context context){
         mqttAndroidClient = new MqttAndroidClient(context, serverUri, clientId);
